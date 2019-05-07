@@ -10,4 +10,4 @@
 
 本书的版权协议为 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en) 。
 
-![](https://github.com/erdong/ansible-notes/tree/master/images/BY_NC_ND.jpg)
+![BY-NC-ND](https://github.com/erdong/ansible-notes/tree/master/images/BY_NC_ND.jpg)
