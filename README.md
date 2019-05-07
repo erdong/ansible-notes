@@ -31,3 +31,4 @@
 
 本书的版权协议为 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en) 。
 
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank"><img alt="启用 CC 授权条款" style="border-width:0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" /></a>
