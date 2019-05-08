@@ -6,6 +6,7 @@
 
 * [第一章 基础入门](ch01/README.md)
     * [1.1 Ansible 介绍](ch01/1.1-ansible-introduce.md)
+    * [1.2 Ansible 安装](ch01/1.2-ansible-install.md)
 * [第二章 基础操作](ch02/README.md)
 * []()
 * []()
