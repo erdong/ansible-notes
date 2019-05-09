@@ -1,0 +1,364 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.2 Ansible 安装 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ch02/" />
+    
+    
+    <link rel="prev" href="1.1-ansible-introduce.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part Ⅰ   基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一章 基础入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="1.1-ansible-introduce.html">
+            
+                <a href="1.1-ansible-introduce.html">
+            
+                    
+                    1.1 Ansible 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.2" data-path="1.2-ansible-install.html">
+            
+                <a href="1.2-ansible-install.html">
+            
+                    
+                    1.2 Ansible 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../ch02/">
+            
+                <a href="../ch02/">
+            
+                    
+                    第二章 基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part ⅠⅠ  进阶篇</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Part ⅠⅠⅠ 实战篇</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.2 Ansible 安装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="12-ansible-&#x5B89;&#x88C5;">1.2 Ansible &#x5B89;&#x88C5;</h1>
+<p>Ansible &#x57FA;&#x4E8E; SSH &#x534F;&#x8BAE;&#x6765;&#x7BA1;&#x7406;&#x673A;&#x5668;&#x3002;</p>
+<p>Ansible &#x4E0D;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x6216;&#x8005;&#x957F;&#x671F;&#x8FD0;&#x884C;&#x3002;&#x53EA;&#x8981;&#x5728;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x5B89;&#x88C5;&#x5C31;&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x6240;&#x6709;&#x7684;&#x673A;&#x5668;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x6240;&#x4EE5;&#x5347;&#x7EA7;&#x6BD4;&#x8F83;&#x7B80;&#x4FBF;&#xFF0C;&#x5347;&#x7EA7;&#x672C;&#x5730; Ansible &#x670D;&#x52A1;&#xFF0C;&#x5373;&#x53EF;&#x5728;&#x6574;&#x4E2A;&#x96C6;&#x7FA4;&#x4E0A;&#x4F7F;&#x7528;&#x3002;</p>
+<h1 id="&#x9009;&#x62E9;&#x54EA;&#x4E2A;&#x7248;&#x672C;">&#x9009;&#x62E9;&#x54EA;&#x4E2A;&#x7248;&#x672C;</h1>
+<p>&#x56E0;&#x4E3A;&#x5B83;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x4ECE;&#x6E90;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x8FDC;&#x7A0B;&#x673A;&#x5668;&#x4E0A;&#x5B89;&#x88C5;&#x4EFB;&#x4F55;&#x8F6F;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x8BB8;&#x591A;&#x7528;&#x6237;&#x5B9E;&#x9645;&#x4E0A;&#x4F1A;&#x8DDF;&#x8E2A;&#x5F00;&#x53D1;&#x7248;&#x672C;&#x3002;</p>
+<p>Ansible &#x7684;&#x53D1;&#x5E03;&#x5468;&#x671F;&#x901A;&#x5E38;&#x4E3A;4&#x4E2A;&#x6708;&#x5DE6;&#x53F3;&#x3002;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x8F83;&#x77ED;&#x7684;&#x53D1;&#x5E03;&#x5468;&#x671F;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x5728;&#x7A33;&#x5B9A;&#x5206;&#x652F;&#x4E0A;&#x7EF4;&#x62A4;&#x5907;&#x4EFD;&#x7AEF;&#x53E3;&#xFF0C;&#x8F83;&#x5C0F;&#x7684;bug&#x901A;&#x5E38;&#x4F1A;&#x5728;&#x4E0B;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x4E2D;&#x4FEE;&#x590D;&#x3002;&#x5728;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E3B;&#x8981;&#x7684;bug&#x4ECD;&#x7136;&#x4F1A;&#x6709;&#x7EF4;&#x62A4;&#x7248;&#x672C;&#xFF0C;&#x5C3D;&#x7BA1;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5E76;&#x4E0D;&#x5E38;&#x89C1;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60A8;&#x5E0C;&#x671B;&#x8FD0;&#x884C;&#x6700;&#x65B0;&#x53D1;&#x5E03;&#x7684; Ansible &#x7248;&#x672C;&#xFF0C;&#x5E76;&#x4E14;&#x6B63;&#x5728;&#x8FD0;&#x884C; RHEL (TM)&#x3001;CentOS&#x3001;Fedora&#x3001;Debian&#x6216;Ubuntu&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x81EA;&#x5DF1;&#x7684;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x3002;
+&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x5B89;&#x88C5;&#x9009;&#x9879;&#xFF0C;&#x5EFA;&#x8BAE;&#x901A;&#x8FC7;&#x201C;pip&#x201D;&#x5B89;&#x88C5;&#xFF0C;&#x5B83;&#x662F;Python&#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x9009;&#x9879;&#x3002;</p>
+<h1 id="ansible-&#x63A7;&#x5236;&#x673A;&#x7684;&#x8981;&#x6C42;">Ansible &#x63A7;&#x5236;&#x673A;&#x7684;&#x8981;&#x6C42;</h1>
+<p>&#x76EE;&#x524D;&#xFF0C;Ansible&#x53EF;&#x4EE5;&#x5728;&#x5B89;&#x88C5;&#x4E86;python2(&#x7248;&#x672C;2.7)&#x6216;python3(&#x7248;&#x672C;3.5&#x6216;&#x66F4;&#x9AD8;)&#x7684;&#x4EFB;&#x4F55;&#x673A;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x3002;&#x63A7;&#x5236;&#x8BA1;&#x7B97;&#x673A;&#x4E0D;&#x652F;&#x6301;Windows&#x3002;
+&#x8FD9;&#x5305;&#x62EC;Red Hat&#x3001;Debian&#x3001;CentOS&#x3001;macOS&#x3001;&#x4EFB;&#x4F55;BSDs&#x7B49;&#x7B49;&#x3002;</p>
+<blockquote>
+<p>macOS &#x5982;&#x679C;&#x60A8;&#x60F3;&#x4F7F;&#x7528;15&#x4E2A;&#x6216;&#x66F4;&#x591A;fork&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528; sudo launchctl limit maxfiles unlimited &#x6765;&#x63D0;&#x9AD8; ulimit&#x3002;&#x6B64;&#x547D;&#x4EE4;&#x8FD8;&#x53EF;&#x4EE5;&#x4FEE;&#x590D;&#x4EFB;&#x4F55;&#x201C;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x592A;&#x591A;&#x201D;&#x9519;&#x8BEF;&#x3002;</p>
+</blockquote>
+<h1 id="&#x88AB;&#x7BA1;&#x7406;&#x8282;&#x70B9;&#x7684;&#x8981;&#x6C42;">&#x88AB;&#x7BA1;&#x7406;&#x8282;&#x70B9;&#x7684;&#x8981;&#x6C42;</h1>
+<p>&#x5728;&#x88AB;&#x7BA1;&#x7406;&#x8282;&#x70B9;&#x4E0A;&#xFF0C;&#x901A;&#x5E38;&#x4F7F;&#x7528; SSH &#x6765;&#x4F5C;&#x4E3A;&#x901A;&#x4FE1;&#x65B9;&#x5F0F;&#x3002;&#x4F20;&#x8F93;&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;sftp&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x652F;&#x6301;&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539; ansible.cfg &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5207;&#x6362;&#x4E3A;&#x4F7F;&#x7528; scp&#x3002;&#x7CFB;&#x7EDF;&#x9700;&#x8981;python2(&#x7248;&#x672C;2.6&#x6216;&#x66F4;&#x9AD8;)&#x6216;python3(&#x7248;&#x672C;3.5&#x6216;&#x66F4;&#x9AD8;)&#x3002;</p>
+<h1 id="&#x5728;&#x7BA1;&#x7406;&#x673A;&#x5668;&#x4E0A;&#x5B89;&#x88C5;-ansible">&#x5728;&#x7BA1;&#x7406;&#x673A;&#x5668;&#x4E0A;&#x5B89;&#x88C5; Ansible</h1>
+<h2 id="dnf-or-yum">DNF or Yum</h2>
+<p>On Fedora</p>
+<pre><code>$ sudo dnf install ansible
+</code></pre><p>On RHEL and CentOS</p>
+<pre><code>$ sudo yum install ansible
+</code></pre><h2 id="apt-ububtu">Apt (Ububtu)</h2>
+<pre><code>$ sudo apt-get update
+$ sudo apt-get install software-properties-common
+$ sudo apt-add-repository --yes --update ppa:ansible/ansible
+$ sudo apt-get install ansible
+</code></pre><h2 id="apt-debian">Apt (Debian)</h2>
+<p>Debian &#x4F7F;&#x7528;&#x4E86;&#x548C; Ubuntu &#x4E00;&#x6837;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x6DFB;&#x52A0;&#x4E0B;&#x6765;&#x884C;&#x5230; /etc/apt/source.list &#x4E2D;</p>
+<pre><code>deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
+</code></pre><p>&#x7136;&#x540E;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;</p>
+<pre><code>$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+$ sudo apt-get update
+$ sudo apt-get install ansible
+</code></pre><h2 id="pip">Pip</h2>
+<p>Ansible &#x53EF;&#x4EE5;&#x901A;&#x8FC7; pip &#x6765;&#x5B89;&#x88C5;&#xFF0C;&#x8BF7;&#x5148;&#x786E;&#x8BA4;&#x7CFB;&#x7EDF;&#x5185;&#x6709;&#x8BE5;&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BF7;&#x5148;&#x5B89;&#x88C5;pip &#x3002;
+&#x5B89;&#x88C5;&#x597D;&#x4EE5;&#x540E;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x5B89;&#x88C5; Ansible&#x3002;</p>
+<pre><code>$ sudo pip install ansible
+</code></pre><h2 id="running-from-source">Running From Source</h2>
+<p>&#x9996;&#x5148; clone &#x4EE3;&#x7801;&#x4ED3;&#x5E93;</p>
+<pre><code>$ git clone https://github.com/ansible/ansible.git --recursive
+$ cd ./ansible
+</code></pre><p>&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code>$ source ./hacking/env-setup
+</code></pre><p>If you want to suppress spurious warnings/errors, </p>
+<pre><code>$ source ./hacking/env-setup -q
+</code></pre><p>&#x786E;&#x4FDD;&#x7CFB;&#x7EDF;&#x5185;&#x5B89;&#x88C5;&#x4E86; pip &#xFF0C;&#x4F7F;&#x7528; pip &#x5B89;&#x88C5; ansible &#x9700;&#x8981;&#x7684; Python module &#x3002;</p>
+<pre><code>$ sudo pip install -r ./requirements.txt
+</code></pre><blockquote>
+<p>&#x4E00;&#x65E6;&#x8FD0;&#x884C;&#x4E86;env-setup&#x811A;&#x672C;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x4E3B;&#x673A;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x5C06;&#x662F;/etc/ansible/hosts.&#x60A8;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6307;&#x5B9A;/etc/ansible/hosts&#x4E4B;&#x5916;&#x7684;&#x76EE;&#x5F55;&#x6587;&#x4EF6;</p>
+</blockquote>
+<p>&#x73B0;&#x5728;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;</p>
+<pre><code>$ ansible all -m ping --ask-pass
+</code></pre><p>&#x5728; Ansible download &#x9875;&#x9762;&#x4E0A;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x5DF2;&#x7ECF;&#x53D1;&#x5E03;&#x7684;&#x538B;&#x7F29;&#x5305;
+<a href="https://releases.ansible.com/ansible/" target="_blank">https://releases.ansible.com/ansible/</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.1-ansible-introduce.html" class="navigation navigation-prev " aria-label="Previous page: 1.1 Ansible 介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ch02/" class="navigation navigation-next " aria-label="Next page: 第二章 基础操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.2 Ansible 安装","level":"2.1.2","depth":2,"next":{"title":"第二章 基础操作","level":"2.2","depth":1,"path":"ch02/README.md","ref":"ch02/README.md","articles":[]},"previous":{"title":"1.1 Ansible 介绍","level":"2.1.1","depth":2,"path":"ch01/1.1-ansible-introduce.md","ref":"ch01/1.1-ansible-introduce.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch01/1.2-ansible-install.md","mtime":"2019-05-08T06:35:12.032Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-08T06:41:15.347Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
