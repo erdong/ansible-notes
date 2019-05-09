@@ -26,7 +26,9 @@
 
 # Feedback
 
-欢迎大家提 [Github Issue](https://github.com/erdong/ansible-notes/issues) 
+这是我的个人 Ansible 学习笔记，如果对你有帮助，请你跳转到 [Github Ansible Notes](https://github.com/erdong/ansible-notes) 点个 Star 。
+
+如果你遇到了问题，欢迎提 [Github Issue](https://github.com/erdong/ansible-notes/issues) , 大家一起交流。
 
 
 # License
