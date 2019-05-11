@@ -31,7 +31,8 @@
         "paperSize": "a4"
     },
     "plugins": [
-        "pageview-count"
+        "pageview-count",
+        "back-to-top-button"
     ],
     "variables": {}
 }
