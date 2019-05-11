@@ -30,6 +30,8 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": [],
+    "plugins": [
+        "pageview-count"
+    ],
     "variables": {}
 }
