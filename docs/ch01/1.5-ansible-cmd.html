@@ -1,0 +1,470 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.5 Ansible 命令行工具 · Ansible Notes</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Er Dong <erdong@mail.erdong.site>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ch02/" />
+    
+    
+    <link rel="prev" href="1.4-ansible-use.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://erdong.site" target="_blank" class="custom-link">Erdong's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part Ⅰ   基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一章 基础入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="1.1-ansible-introduce.html">
+            
+                <a href="1.1-ansible-introduce.html">
+            
+                    
+                    1.1 Ansible 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="1.2-ansible-install.html">
+            
+                <a href="1.2-ansible-install.html">
+            
+                    
+                    1.2 Ansible 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="1.3-ansible-config.html">
+            
+                <a href="1.3-ansible-config.html">
+            
+                    
+                    1.3 Ansible 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="1.4-ansible-use.html">
+            
+                <a href="1.4-ansible-use.html">
+            
+                    
+                    1.5 Ansible 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.5" data-path="1.5-ansible-cmd.html">
+            
+                <a href="1.5-ansible-cmd.html">
+            
+                    
+                    1.5 Ansible 命令行工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../ch02/">
+            
+                <a href="../ch02/">
+            
+                    
+                    第二章 基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part ⅠⅠ  进阶篇</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Part ⅠⅠⅠ 实战篇</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.5 Ansible 命令行工具</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="15-ansible-&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;">1.5 Ansible &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</h1>
+<p>Ansible &#x6700;&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x662F; ansible &#x548C; ansible-playbook&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x5E76;&#x4E0D;&#x662F;ansible&#x63D0;&#x4F9B;&#x7684;&#x552F;&#x4E00;&#x5DE5;&#x5177;&#x3002;&#x4E0B;&#x9762;&#x662F; Ansible utility &#x7684;&#x5B8C;&#x6574;&#x5217;&#x8868;&#x3002;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x5305;&#x542B;&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x63CF;&#x8FF0;&#x548C;&#x53D7;&#x652F;&#x6301;&#x53C2;&#x6570;&#x7684;&#x5217;&#x8868;&#x3002;</p>
+<ul>
+<li>ansible</li>
+<li>ansible-config</li>
+<li>ansible-console</li>
+<li>ansible-doc</li>
+<li>ansible-galaxy</li>
+<li>asnible-inventory</li>
+<li>ansible-playbook</li>
+<li>ansible-pull</li>
+<li>ansible-vault</li>
+</ul>
+<h1 id="ansible">ansible</h1>
+<h2 id="&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;">&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2>
+<pre><code>ansible &lt;host-pattern&gt; [options]
+</code></pre><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<p>&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x5DE5;&#x5177;/&#x6846;&#x67B6;/API&#xFF0C;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x201C;&#x8FDC;&#x7A0B;&#x64CD;&#x4F5C;&#x201D;&#x3002;&#x8BE5;&#x547D;&#x4EE4;&#x5141;&#x8BB8;&#x60A8;&#x5BF9;&#x4E00;&#x7EC4;&#x4E3B;&#x673A;&#x5B9A;&#x4E49;&#x548C;&#x8FD0;&#x884C;&#x5355;&#x4E2A;&#x4EFB;&#x52A1; playbook &#x3002;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<pre><code>ansible web01 -m ping
+</code></pre><h1 id="ansible-config">ansible-config</h1>
+<h2 id="&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;">&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2>
+<pre><code> ansible-config [view|dump|list] [--help] [options] [ansible.cfg]
+</code></pre><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<p>&#x547D;&#x4EE4;&#x884C;&#x914D;&#x7F6E;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<pre><code>-c &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;
+--version &#x663E;&#x793A;&#x7248;&#x672C;&#x53F7;
+-v &#x8BE6;&#x7EC6;&#x6A21;&#x5F0F;
+</code></pre><h1 id="ansible-console">ansible-console</h1>
+<h2 id="&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;">&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2>
+<pre><code>ansible-console [&lt;host-pattern&gt;] [options]
+</code></pre><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<p>&#x4E00;&#x79CD;REPL&#xFF0C;&#x5141;&#x8BB8;&#x5BF9;&#x9009;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#x8FD0;&#x884C;&#x7279;&#x5B9A;&#x4EFB;&#x52A1;&#x3002;(&#x57FA;&#x4E8E; dominis &#x7684; ansible-shell)</p>
+<h1 id="ansible-doc">ansible-doc</h1>
+<h2 id="&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;">&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2>
+<pre><code>ansible-doc [-l|-F|-s] [options] [-t &lt;plugin type&gt; ] [plugin]
+</code></pre><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<p>&#x663E;&#x793A;&#x5B89;&#x88C5;&#x5728;Ansible&#x5E93;&#x4E2D;&#x7684;&#x6A21;&#x5757;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x7528;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6BCF;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#x3002;&#x7C7B;&#x4F3C;&#x4E8E; man &#x624B;&#x518C;&#xFF0C;&#x5F53;&#x524D;&#x6709; 1000+ &#x6A21;&#x5757;&#x3002;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<pre><code># &#x5217;&#x51FA;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x6A21;&#x5757;
+ansible-doc -l 
+
+# &#x663E;&#x793A; Copy &#x6A21;&#x5757;&#x7684;&#x4F7F;&#x7528;&#x4FE1;&#x606F;
+ansible-doc copy
+</code></pre><h1 id="ansible-galaxy">ansible-galaxy</h1>
+<h2 id="&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;">&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2>
+<pre><code>ansible-galaxy [delete|import|info|init|install|list|login|remove|search|setup] [--help] [options] ...
+</code></pre><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<p>&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406; Ansible &#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x5E93;&#x7684; role&#xFF0C;&#x9ED8;&#x8BA4;&#x7684; Galaxy &#x4ED3;&#x5E93;&#x662F; <a href="https://galaxy.ansible.com" target="_blank">https://galaxy.ansible.com</a> . &#x5B89;&#x88C5;&#x540E;&#x9ED8;&#x8BA4;&#x4F1A;&#x5B89;&#x88C5;&#x5230; /etc/ansible/roles/ &#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<pre><code>[root@172-18-12-6 ~]# ansible-galaxy install geerlingguy.docker
+- downloading role &apos;docker&apos;, owned by geerlingguy
+- downloading role from https://github.com/geerlingguy/ansible-role-docker/archive/2.5.2.tar.gz
+- extracting geerlingguy.docker to /root/.ansible/roles/geerlingguy.docker
+- geerlingguy.docker (2.5.2) was installed successfully
+[root@172-18-12-6 ~]# ansible-galaxy list
+- geerlingguy.docker, 2.5.2
+ [WARNING]: - the configured path /usr/share/ansible/roles does not exist.
+</code></pre><h1 id="asnible-inventory">asnible-inventory</h1>
+<h2 id="&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;">&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2>
+<pre><code>ansible-inventory [options] [host|group]
+</code></pre><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<p>&#x5728;&#x5927;&#x89C4;&#x6A21;&#x7684;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7BA1;&#x7406;&#x4E0D;&#x540C;&#x4E1A;&#x52A1;&#x7684;&#x4E0D;&#x540C;&#x673A;&#x5668;&#xFF0C;&#x8FD9;&#x4E9B;&#x673A;&#x5668;&#x7684;&#x4FE1;&#x606F;&#x90FD;&#x5B58;&#x653E;&#x5728; Ansible &#x7684; Inventory &#x7EC4;&#x4EF6;&#x91CC;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x5DE5;&#x4F5C;&#x4E2D;&#x914D;&#x7F6E;&#x90E8;&#x7F72;&#x9488;&#x5BF9;&#x7684;&#x4E3B;&#x673A;&#x5FC5;&#x987B;&#x5148;&#x5B58;&#x653E;&#x5728; Inventory &#x91CC;&#x8FB9;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x80FD;&#x4F7F;&#x7528; Ansible &#x5BF9;&#x5B83;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;&#x9ED8;&#x8BA4; Ansible &#x7684; Inventory &#x662F;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684; INI &#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#xFF0C;/etc/ansible/hosts ,&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6216;&#x8005;&#x53C2;&#x6570;&#x4E34;&#x65F6;&#x6307;&#x5B9A;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<pre><code>[root@172-18-12-6 ~]# ansible-inventory --list
+{
+    &quot;_meta&quot;: {
+        &quot;hostvars&quot;: {}
+    },
+    &quot;all&quot;: {
+        &quot;children&quot;: [
+            &quot;ungrouped&quot;
+        ]
+    },
+    &quot;ungrouped&quot;: {}
+}
+</code></pre><h1 id="ansibl-playbook">ansibl-playbook</h1>
+<h2 id="&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;">&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2>
+<pre><code>ansible-playbook [options] playbook.yml [playbook2 ...]
+</code></pre><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<p>&#x8FD0;&#x884C; Ansible Playbook &#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x548C;&#x90E8;&#x7F72;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#x3002;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<pre><code>ansible-playbook test.yml
+</code></pre><h1 id="ansible-pull">ansible-pull</h1>
+<h2 id="&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;">&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2>
+<h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<pre><code>
+
+</code></pre><h1 id="ansible-vault">ansible-vault</h1>
+<h2 id="&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;">&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;</h2>
+<pre><code>
+
+</code></pre><h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<pre><code>
+
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.4-ansible-use.html" class="navigation navigation-prev " aria-label="Previous page: 1.5 Ansible 使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ch02/" class="navigation navigation-next " aria-label="Next page: 第二章 基础操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.5 Ansible 命令行工具","level":"2.1.5","depth":2,"next":{"title":"第二章 基础操作","level":"2.2","depth":1,"path":"ch02/README.md","ref":"ch02/README.md","articles":[]},"previous":{"title":"1.5 Ansible 使用","level":"2.1.4","depth":2,"path":"ch01/1.4-ansible-use.md","ref":"ch01/1.4-ansible-use.md","articles":[]},"dir":"ltr"},"config":{"plugins":["pageview-count","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"pageview-count":{},"back-to-top-button":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Er Dong <erdong@mail.erdong.site>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Ansible Notes","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Erdong's Blog":"https://erdong.site"}},"gitbook":"*","description":"This is a note of ansile","extension":null},"file":{"path":"ch01/1.5-ansible-cmd.md","mtime":"2019-05-21T06:56:17.711Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-21T06:58:15.267Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
