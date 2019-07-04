@@ -40,6 +40,9 @@
 
 如果你遇到了问题，欢迎提 [Github Issue](https://github.com/erdong/ansible-notes/issues) , 大家一起交流。
 
+# Thanks
+
+感谢师父 [zhong](https://github.com/zhong) 对我的指导，从他那里借了很多书，解答了我很多的疑惑。
 
 # License
 
